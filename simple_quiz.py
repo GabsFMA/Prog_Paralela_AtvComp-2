@@ -22,7 +22,7 @@ for i, question in enumerate(data['results'], start=1):
     pergunta = html.unescape(question['question'])  
     print(f"\nQuestion {i}: {pergunta}")
     opcoes = [html.unescape(opt) for opt in question['incorrect_answers'] + [question['correct_answer']]]
-    opcoes = sorted(opcoes)  # Opcional: Ordenar as opções alfabeticamente
+    opcoes = sorted(opcoes) 
     letras = string.ascii_lowercase[:len(opcoes)]  # Gerar letras (a, b, c, ...)
     mapa_opcoes = dict(zip(letras, opcoes))  # Mapear letras para opções
     
